@@ -15,19 +15,25 @@ public class Movie {
     private Long id;
 
     private String title;
-    private String genre;
+ 
     private boolean popular;
+    private boolean drama;
+    private boolean comedy;
+    private boolean action;
     private String posterUrl;  // New field for the poster URL
 
     // Constructors
     public Movie() {
     }
 
-    public Movie(String title, String genre, boolean popular, String posterUrl) {
+    public Movie(String title, boolean popular,boolean drama,boolean comedy,boolean action, String posterUrl) {
         this.title = title;
-        this.genre = genre;
+    
         this.popular = popular;
         this.posterUrl = posterUrl;
+        this.drama=drama;
+        this.comedy=comedy;
+        this.action=action;
     }
 
     // Getters and Setters
@@ -44,13 +50,7 @@ public class Movie {
         this.title = title;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
+    
 
     public boolean isPopular() {
         return popular;
@@ -62,6 +62,30 @@ public class Movie {
 
     public String getPosterUrl() {
         return posterUrl;
+    }
+
+    public boolean isDrama() {
+        return drama;
+    }
+
+    public void setDrama(boolean drama) {
+        this.drama = drama;
+    }
+
+    public boolean isComedy() {
+        return comedy;
+    }
+
+    public void setComedy(boolean comedy) {
+        this.comedy = comedy;
+    }
+
+    public boolean isAction() {
+        return action;
+    }
+
+    public void setAction(boolean action) {
+        this.action = action;
     }
 
     public void setPosterUrl(String posterUrl) {
